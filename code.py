@@ -4,39 +4,39 @@ import time
 print("""
 *********************************
 
-Sayı Tahmin Oyununa Hoşgeldiniz..
+Welcome to the Number Guessing Game ..
 
 *********************************
 """)
 
-print("Lütfen 1 ve 100 arasında bir sayı tahmin ediniz.")
+print("Please guess a number between 1 and 100..")
 
-rastgele_sayı = random.randint(1,100)
+random_number = random.randint(1,100)
 
-tahmin_hakkı=10
+life=10
 
 while True:
 
-    tahmin = int(input("lütfen sayı giriniz."))
+    guess = int(input("Please enter a number."))
 
-    if tahmin < rastgele_sayı:
-        print("Lütfen bekleyin...")
+    if guess < random_number:
+        print("Please wait...")
         time.sleep(1)
 
-        print("Lütfen daha büyük bir sayı giriniz.")
-        tahmin_hakkı -=1
+        print("Please enter a bigger number.")
+        life -=1
 
-    elif tahmin > rastgele_sayı:
-        print("Lütfen bekleyin...")
+    elif guess > random_number:
+        print("Please wait...")
         time.sleep(1)
 
-        print("lütfen daha küçük bir sayı giriniz.")
-        tahmin_hakkı -=1
+        print("Please enter a smaller number")
+        life -=1
 
     else:
-        print("Tebrikler.. Kazandınız :)) ")
+        print("Congratulations .. You won :)) ")
         exit()
 
-    if tahmin_hakkı ==0:
-        print("Üzgünüz, kaybettiniz :( ")
+    if life ==0:
+        print("Sorry, you lost :( ")
         break
