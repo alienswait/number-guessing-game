@@ -1,2 +1,2 @@
-# Sayi_tahmin_oyunu
-Sayı tahmin oyunu 
+# number-guessing-game
+number guessing game
